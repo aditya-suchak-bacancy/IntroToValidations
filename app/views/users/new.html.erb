@@ -7,7 +7,7 @@
         <div><%= message %></div>
       <% end %>
     </div>
-
+    </br>
     <div>
       <%= form.label :last_name %><br>
       <%= form.text_field :last_name %>
@@ -15,23 +15,25 @@
         <div><%= message %></div>
       <% end %>
     </div>
-
+    </br>
     <div>
       <%= form.label :dob %><br>
-      <%= form.text_field :dob %>
+      <%= form.date_field :dob, class: 'form-control' %>
       <%= @user.errors.full_messages_for(:dob).each do |message| %>
         <div><%= message %></div>
       <% end %>
     </div>
-
+    </br>
     <div>
-      <%= form.label :gender %><br>
-      <%= form.text_field :gender %>
-      <%= @user.errors.full_messages_for(:gender).each do |message| %>
-        <div><%= message %></div>
-      <% end %>
+        <%= form.radio_button :gender, 'male' %> 
+        <%= form.label :gender, 'male', :value => 'male' %>
+        <%= form.radio_button :gender, 'female' %>
+        <%= form.label :gender, 'female', :value => 'female' %>
+        <%= @user.errors.full_messages_for(:gender).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
     </div>
-
+    </br>
     <div>
       <%= form.label :address %><br>
       <%= form.text_field :address %>
@@ -39,7 +41,7 @@
         <div><%= message %></div>
       <% end %>
     </div>
-
+    </br>
     <div>
       <%= form.label :pin %><br>
       <%= form.text_field :pin %>
@@ -47,7 +49,7 @@
         <div><%= message %></div>
       <% end %>
     </div>
-
+    </br>
     <div>
       <%= form.label :contact_no %><br>
       <%= form.text_field :contact_no %>
@@ -55,7 +57,7 @@
         <div><%= message %></div>
       <% end %>
     </div>
-
+    </br>
     <div>
       <%= form.submit %>
     </div>
