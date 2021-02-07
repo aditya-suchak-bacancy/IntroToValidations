@@ -1,0 +1,63 @@
+<h1> New! </h1>
+<%= form_with model: @user do |form| %> 
+    <div>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+      <%= @user.errors.full_messages_for(:name).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.label :last_name %><br>
+      <%= form.text_field :last_name %>
+      <%= @user.errors.full_messages_for(:last_name).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.label :dob %><br>
+      <%= form.text_field :dob %>
+      <%= @user.errors.full_messages_for(:dob).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.label :gender %><br>
+      <%= form.text_field :gender %>
+      <%= @user.errors.full_messages_for(:gender).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.label :address %><br>
+      <%= form.text_field :address %>
+      <%= @user.errors.full_messages_for(:address).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.label :pin %><br>
+      <%= form.text_field :pin %>
+      <%= @user.errors.full_messages_for(:pin).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.label :contact_no %><br>
+      <%= form.text_field :contact_no %>
+      <%= @user.errors.full_messages_for(:contact_no).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.submit %>
+    </div>
+
+<% end %>
