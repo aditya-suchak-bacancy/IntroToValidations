@@ -25,3 +25,7 @@ joining date:
 <br></br>
 job_location:
 <%= @user.job_location =%>
+<br></br>
+<%= link_to "Destroy", user_path(@user),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
